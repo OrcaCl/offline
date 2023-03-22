@@ -222,3 +222,12 @@ No lo he aplicado, pero Guillermo comentó al final del episodio 2, semana 2, el
 
 En un contexto en que hayan 2 "multiversos", en la rama continua, si tiene muchos commit, podemos usar el comando **cherry-pick** para tomar el último commit de esa rama y traerlo a la rama base o main, y hacer el merge. También podemos tomar el último commit de esa rama y moverlo para otro lado. La analogía viene de tomar la cereza de la torta.
 
+### Bajar del Staging area
+
+Casi me condoreo otra vez, así que cree .gitignore para bloquear todo lo que no quiero subir, y ahora aprendí a como sacar algo del Staging Area, porque casi lo subo por error en el commit.
+
+Hay que hacer:
+>git rm --cached <archivo> 
+para bajarlo del commit siguiente.
+
+
