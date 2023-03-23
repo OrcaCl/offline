@@ -230,4 +230,34 @@ Hay que hacer:
 >git rm --cached <archivo> 
 para bajarlo del commit siguiente.
 
+**23-03-2023**
+
+### GIT STASH
+Acá Guillermo explica el tema de STASH.
+
+>git stash 
+
+Guarda en "memoria" todos los cambios staged y permite poder moverlos a otra rama o "bajarlos" nuevamente.
+
+>git stash pop
+
+Los baja nuevamente.
+
+### GIT FETCH
+
+>git fetch
+
+Consulta si hay cambios en remoto, pero no los baja.
+
+### Merging 
+
+Guillermo se condoreó con algo y tuvo que revisar colisiones. 
+Llamó a la descarga y en local hizo la comprobación de qué se queda y que se cambia con:
+>git pull origin main(master)
+
+y después con:
+>Code .
+
+Abrió los archivos con modificaciones pendientes y fue escogiendo.
+
 

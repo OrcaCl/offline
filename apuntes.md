@@ -146,7 +146,7 @@ Cuando haces un merge de una rama, se pega adelante. Eso se llama, Git Merge Fas
 
 # Apuntes 15-03-2023
 
-## Semana 2 Clase 1
+## Semana 2 Clase 1: Intro A Javascript
 
 **Primer encargo**
 - Hacer al menos 2 revisiones de Pull-Request para ayudar a los demás amigos que están empezando el bootcamp.
@@ -446,9 +446,23 @@ const arrayValido = humano instanceof Array ? console.log('Es Array') : console.
 
 //Midudev
 
+//La solución de Guillermo, fue usando la propiedad de "largo" de un arreglo. 
+
+Los Arrays tienen la propiedad de largo, mientras que los objetos no.
+
+>let arr = ['verde','azul','caca'];
+>arr.lenght // para ver la cantidad de elementos que tiene el array.
+>typeof arr === 'object' && arr.lenght != null
+>true
+
+Y funciona, pero si al array le ingresamos el valor:
+>let arr = { lenght: true }
+
+la comprobación se fue al carajo.
 
 
 
+# Semana 2, Clase 3: HTML Semántico
 
 
 
