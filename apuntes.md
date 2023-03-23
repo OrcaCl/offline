@@ -464,12 +464,77 @@ la comprobación se fue al carajo.
 
 # Semana 2, Clase 3: HTML Semántico
 
+(Validator W3.org)[https://validator.w3.org/nu/]
+
+## Tags Semánticos.
+
+### Article
+Un artículo de alguna cosa. Un detalle de información.
+
+### Section 
+Una sección o contenedor de secciones. Puede contener muchos <articles>
+Es una sugerencia. Porque pueden haber artículos con muchas secciones internas.
+
+Pueden tener un encabezado <h1></h1>
+
+### Nav
+
+Un menú idealmente que venga en un nav.
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+
+### Header
+Puede ser de la página o de un artículo
+La parte superior de la página. Puede contener la marca, el navegador, etc.
 
 
+### Footer
+Puede ser el footer del artículo o de la página
+La parte inferior
+
+(HTML Living Standard)[http://html.spec.whatwg.org/#the-document-object]
+
+(MDB Web Docs)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section]
+
+### Aside
+
+No tiene un valor semántico, más que comunicar que el contenido no está conectado con el resto.
+Es para poner pops, anuncios o avisos entre los section o articles.
+"Algo al lado, que no tiene que ver. Recomendaciones"
+
+### Divs
+
+Para que se usan los divs?. Para maquetar contenido. No entregan ningún significado semántico. Son `Invisibles`
+
+### Time y Address
+
+Sirve para encapsular una fecha y hora.
+
+<p>Hola que tal, festival. <time datetime="2023-03-23 03:30"></time></p>
+
+<address>
+ Por favor contacte a: <a href="mailto:orlando.caffarena@gmail.com">PReguntar weas</a>
+</address>
+
+### Figure, figcaption, picture e img
+Semánticamente, si una imagen o fotografía, tiene relación con el texto, debe ir dentro de figure. Sino es una img, que es algo de relleno, gráfico no más.
 
 
+<figure>
+    <img src="elemento.jpg" alt="Descripcion del elemento para ayudar a quienes no pueden ver la foto" />
+    <figcaption>
+        acá va la descripción de la fotografía, de forma visible.
+    </figcaption>
+</figure>
 
+<picture></picture>
 
+(HTML5Doctor)[https://html5doctor.com/element-index/#main-desc]
 
-
+Investigar más sobre ARIA
 
