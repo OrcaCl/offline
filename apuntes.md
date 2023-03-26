@@ -538,3 +538,36 @@ Semánticamente, si una imagen o fotografía, tiene relación con el texto, debe
 
 Investigar más sobre ARIA
 
+
+# Semana 2 Clase 4
+# Formularios HTML, JSON, DOM y CSSOM
+
+## Formularios clásicos
+
+
+    <form action='/server' method='get' class='form'>
+    </form>
+
+    Cliente--> www --->https request ---> http headers ----> Servidor
+    ---->Servidor----->https response ---> http headers ----> html+css
+
+
+>npx vite dev 
+>serve .
+
+Ambos hacen lo mismo.
+
+## inputs 
+
+¿Cómo validar un radio?
+Se inicializa con un checked.
+El Select, se pone required en select y no en option.
+
+
+    http://localhost:5173/server?name=aaa&email=aa%40sdfsd&budget=5000&description=dddd&terms=on
+
+## Estilos de formulario
+
+Carmen Ansio
+Seruda
+Caro Jaramillo - El Poder de los Hábitos.
