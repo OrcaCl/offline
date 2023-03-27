@@ -566,8 +566,119 @@ El Select, se pone required en select y no en option.
 
     http://localhost:5173/server?name=aaa&email=aa%40sdfsd&budget=5000&description=dddd&terms=on
 
+**26-03-2023***************************************
+
 ## Estilos de formulario
 
 Carmen Ansio
 Seruda
 Caro Jaramillo - El Poder de los Hábitos.
+
+
+
+### Buttons
+
+Los botones deben usar:
+
+    cursor: pointer;
+
+Cosas nuevas:
+
+    text-shadow: -1px -1px 0 rgba(255,255,255,.6);
+    box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+
+## Controles Modernos para Formularios
+
+- **email**: Acepta una dirección de correo electrónico.
+
+    \<input type="email" name="email">
+
+- **url**: Acepta una URL
+
+    \<input type="url" name="website">
+
+- **-number**: Aceta números enteros o decimales. Puedes especificar adicioneales como min, max y step para restringir y controlar el rango de valores permitidos.
+
+    \<input type="number" name="age" min="1" max="100">
+
+- **range**: Acepta un rango de números y presenta un control deslizante en la interfaz de usuario. También permite atributos min, max y step.
+
+    \<input type="range" name="volume" min="0" max="100">
+
+- **date**: Acepta fecha y muestra un selector de fecha en la interfaz de usuario.
+
+    \<input type="date" name="birthdate">
+
+- **time**: Acepta una hora y muetra un selector de hora en la interfaz de usuario.
+
+    \<input type="time" name="app_time">
+
+- **datetime-local**: Acepta una fecha y hora y muestra un selector de fecha y hora en la interfaz de usuario.
+
+    \<input type="datetime-local" name="meeting">
+
+- **color**: Acepta un valor de color y muestra un selector de color de la interfaz de usuario.
+
+    \<input type="color" name="fav_color">
+
+- **search**: Acepta una cadena de búsqueda y puede mostrar sugerencias de busqueda en algunos navegadores.
+
+    \<input type="search" name="query">
+
+- **tel**: Acepta un número de teléfono aunque no realiza una validación específica del número. Se usa para mejorar la experiencia de usuario en mobile, mostrando el teclado numérico adecuado.
+
+    \<input type="tel" name="phone">
+
+<br>
+<br>
+
+# JSON
+
+JSON (JavaScript Object Notation) es un formato de intercambio de datos ligero y usado en todas las tecnologías actuales de programación.
+
+Los objetos JSON estanf formados por pares de clave-valor, donde las claves son siempre **strings** y los valores pueden ser **strings, números, objetos, arrays, true, false o null**.
+
+    ¡¡Siempre usar COMILLAS DOBLES!!!
+
+(Resumen inicial, porque se saltó la wea entera xD)
+
+# DOM (Document Object Model)
+
+Es una representación en forma de árbol de los elementos y estructura de una página web.
+
+Es una interfaz de programación que permite a los desarrolladores interactuar y manipular el **contenido, la estructura y el estilo** de la página web utilizando JavaScript.
+
+    document.createElement("div");
+    document.createTextNode("Hello World");
+
+    document.getElementById("id");
+    document.getElementByClassName("class");
+
+    document.querySelector("form");
+    document.querySelectorAll"(".form-group");
+
+
+# ¿Qué es el CSSOM?
+
+El CSSOM (CSS Object Model) es una representación en forma de árbol de todos los estilos CSS asociados con una página web.
+
+Al igual que el DOM, representa la estructura y el contenido de una página web, el CSSOM representa la información de estilo de la página.
+
+    document.body.style.background = tomato;
+
+https://css-tricks.com/an-introduction-and-guide-to-the-css-object-model-cssom/
+
+https://lenguajejs.com/javascript/objetos/json/
+
+Ver Slides por más.
+
+
+
+## Calentamiento
+Ir a https://codepen.io/pen/
+En la  zona de html , escribir el siguiente control:
+
+    <input type="datetime-local" name="meeting">
+
+## Ejercicio Semana 2 Clase 4
+> Agregar un formulario de contacto, en un archivo externo en el perfil del ejercicio de semana-2
