@@ -680,5 +680,30 @@ En la  zona de html , escribir el siguiente control:
 
     <input type="datetime-local" name="meeting">
 
+<hr>
+<br>
+<br>
+
 ## Ejercicio Semana 2 Clase 4
 > Agregar un formulario de contacto, en un archivo externo en el perfil del ejercicio de semana-2
+
+
+# Semana 3 - Clase 1 # 
+> 28-03-2023
+
+## FLEX ##
+
+Es el sueño de todo papá. Que los hijos hagan caso xD
+
+    display: flex
+    display: inline-flex
+
+Puede ser de ambos, pero solo 1.
+Flex va a intentar meter dentro del contenedor todos los elementos, sin importar como se aplaste o estire la interfaz
+
+|propiedad| función|
+|-|-|
+|flex-wrap: wrap| Si los elementos no caben dentro de la linea, flex los va a quebrar y meter en otra fila.|
+|flex-wrap: nowrap| es lo opuesto a lo anterior|
+
+
