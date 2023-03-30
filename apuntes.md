@@ -705,5 +705,57 @@ Flex va a intentar meter dentro del contenedor todos los elementos, sin importar
 |-|-|
 |flex-wrap: wrap| Si los elementos no caben dentro de la linea, flex los va a quebrar y meter en otra fila.|
 |flex-wrap: nowrap| es lo opuesto a lo anterior|
+|flex-direction: column| Altera la dirección hacia donde van los elementos. Columna para el lado, row para abajo|
+|justify-content| Funciona en el EJE PRINCIPAL |
+|justify-content: flex-end| Parte desde la derecha a la izquierda|
+|justify-content + wrap| Permite que se ajusten al ancho del item, y lo hace stack hacia abajo|
+|justify-content: space-between| rellena con un espacio entre los items para justificar el espacio disponible|
+|justify-content| No se puede usar en elementos NOWRAP|
+|justify-content: space-around| rellena con los espacios desde afuera hacia adentro|
+|justify-content: space-evenly| rellena con espacios de igual tamaño |
+|align-items| Es para el EJE CRUZADO |
+|align-items: center | Alineado al centro del eje cruzado| 
+|flex-direction| Si lo cambio, se invierten justify-content y align-items|
+|align-content| Afecta a elementos multilinea|
+|align-content:stretch| es el valor por omisión|
+
+`Align-content puede tomar posesión de los elementos por sobre align-items, porque los agarra a todos como un grupo y no por los elementos individuales.`
 
 
+**Links**
+
+[CSSReference.io](https://cssreference.io)
+
+## CSS GRID ##
+
+
+- Grid = Retícula. / Cuadrícula
+- Grid Line = Es una línea (la divisoria de los elementos.)
+- Grid Track = Son las columnas o las filas
+- Grid Area = Una zona o un conjunto adjascente de columnas y filas
+- Grid Cell = es un cuadrito o una celda de la cuadrícula.
+
+<br>
+
+    IMPORTANTE: Si uno usa GRID, las celdas son de width y height AUTO!
+
+<br>
+
+No solo podemos asignarle valores a los Grid Tracks, usando grid-template-rows y grid-template-columns. Además podemos ponerles nombres:
+
+    >grid-template-columns: 
+    [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end]
+
+grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+    
+
+data-line-names="first line2 line3 col4-start five end"
+
+|Propiedad| Función|
+|---------|--------|
+|grid-template-column|para asignar tamaños a las columnas de la plantilla base|
+|grid-template-rows| para asignar valores / tamaños a las filas de la plantilla base|
+
+Sigo mañana...
+
+------*--------
