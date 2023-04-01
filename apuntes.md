@@ -759,3 +759,79 @@ data-line-names="first line2 line3 col4-start five end"
 Sigo mañana...
 
 ------*--------
+
+Seguimos: 01-04-2023
+
+**Ejercicio 1 Clase 1, Semana 3**
+
+¿Cómo poner .item-a en esta posición?
+
+| | | | | | | |
+|-|-|-|-|-|-|-|
+| |+|+|+|+|+| |
+| |+|+|+|+|+| |
+| |+|+|+|+|+| |
+| |-|-|-|-|-| |
+| | | | | | | |
+
+Este ejercicio ya lo hicimos durante la clase.
+
+Hay que establecer el grid template columns y grid-template-rows con nombres de lineas, y posteriormente, definir la ubicación de .item-a, usando grid-columns y grid-rows:
+
+    .grid-item-1 {
+        background-color: turquoise;
+        grid-column: 2 / 3 ;
+        grid-row: row1-end / third-line;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [fin];
+        
+        grid-template-rows: [row1-start] 25% [row1-end] 100px  [third-line] auto [last-line];
+        
+        height: 100%;
+        border: 2px dashed teal;
+    }
+
+Ya se me había olvidado. Pero bueno saberlo para no tener que repetirlo.
+
+
+## Otras propiedades de Flex y Grid ##
+
+### `Alinear Divs al centro-style` ###
+Al usar grid, todo se ajusta más fácil.
+
+    display: grid;
+    place-items: center;
+
+
+### `Panqueque desarmado` ###
+Maqueta que se ajusta al ancho del contenedor, achicando o reubicando elementos según espacio disponible "mínimo, máximo e inicial".
+
+    flex: 1 1 150px; /* Estirable cuánto va a crecer, cuánto se va a encoger, cuánto es lo inicial */
+    flex: 0 1 150px; /* No estirable */
+    margin: 5px; 
+
+
+### `Sidebar Says` ###
+Maqueta que se ajusta según el tamaño responsive de su sidebar.
+En este caso, el Sidebar usa como tamaño minimo 150x, y como máximo el 25% de espacio disponible en relación al total. El resto, se absorbe como 1 fracción restante para el "main".
+
+    .ex3 .parent {
+        display: grid;
+        grid-template-columns: minmax(150px, 25%) 1fr;
+    }
+
+
+### `Ver Más en: ` ###
+
+[Layouts de 1 Linea](https://1linelayouts.glitch.me/)
+
+Jugar con la ranita y el Grid garden, para practicar Flexbox y GRID.
+
+[Ranita CSS](https://flexboxfroggy.com/#es)
+[CSS Grid Garden](https://cssgridgarden.com/#es)
+
+Ejercicio 2: Hacer una diagramación tipo Blog, siguiendo el ejemplo del codepen: https://codepen.io/glrodasz/pen/wvEXqLB
+
