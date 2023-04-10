@@ -835,3 +835,109 @@ Jugar con la ranita y el Grid garden, para practicar Flexbox y GRID.
 
 Ejercicio 2: Hacer una diagramación tipo Blog, siguiendo el ejemplo del codepen: https://codepen.io/glrodasz/pen/wvEXqLB
 
+06-04-2023 - Blog listo en /Code/blog
+
+# CSS Responsive #
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Finalmente sabemos que el primer meta es una solicitud para que la compatibilidad con IE sea con la última versión, llamada `edge`pero que probablemente desaparezca en el futuro o no sea necesario su uso.
+
+El otro meta, lo veremos más adelante. Se borra otra vez.
+
+## Posicionamiento ##
+
+|posición| descripcion|
+|--------|------------|
+| static | Sin posicionamiento. |
+| relative | posicionamiento relativo al entorno, y empieza desde la esquina superior izquierda |
+| absolute | posicionamiento absoluto según el contenedor posicionado PADRE **Ojo, si al contenedor de absolute, le pongo absolute, se levanta todo y "FLOTA" en Z-INDEX sobre los otros elementos**, que se ajustan y se suben |
+| fixed | posición relativa al BODY siempre | 
+
+## Design Layouts ##
+
+Hay Flexible, Centrado, Fijo, y otro que no anoté :P
+
+## Media Querys ## 
+
+Algunos Breakpoints para 2023
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+
+
+@media (max-width: 575.98px) { ... }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+Me lo salté porque no hizo mucho por ahora.
+
+**09-04-2023**
+
+Ahora volvió el query.
+
+    @media screen (min-width: 992px) {
+        //blabla
+    } 
+
+Otro importante que estaba en el tintero es:
+
+## Deshabilitar el Zoom ##
+
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+
+Esta instrucción es para deshabilitar el zoom. 
+
+## CSS Container Queries ##
+
+En vez de hacer media queries al tamaño de la pantalla, se hacen al tamaño del CONTENEDOR.
+
+
+## ¿Cómo hacer imágenes responsive? ##
+
+Consideremos que hay retina display, así que las fotos van al doble que lo que requieres.
+
+**SVG**: width: 100%, max-width
+
+### Técnica 1: Imágenes de 2x con srset ###
+
+**JPG, PNG**:
+
+    <div class="illustration">
+        <img src='illustration-small.png'
+            srcset ='images/illustration-small.png 1x,
+                    ='images/illustration-big.png x2'
+            style='max-width: 500px' />
+
+
+### Técnica 2: Usar dirección de arte con 'Picture' ###
+
+    <div class='photo'>
+        <picture>
+            <source media=' (min-width: 401px) '
+                    srccset='images/photo-big.jpg' />
+            <source media=' (max-width: 400px) '
+                    srcset='images/photo-tall.jpg' />
+            <img src='images/photo-small.jpg' />        
+        </picture>
+    </div>
+
+
