@@ -940,4 +940,61 @@ Consideremos que hay retina display, así que las fotos van al doble que lo que 
         </picture>
     </div>
 
+**12-04-2023**
 
+Semana 3, Clase 3: Estructuras Modernas
+
+Me garché el repositorio de semana-2 pegando cosas de la semana 3, pero ya lo recuperé con git log, git reset HEAD, git pull.config rebase=false, git pull origin main, y chao.
+
+Pero antes hay que copiar las cosas que modifiqué en una carpeta extra.  Los ejercicios de la Clase 3, Semana 3 quedaron en /offline/s3c3/
+
+**IMPORTANTE**
+
+En esta clase instalamos MAL veet (vite). La forma correcta es instalarlo en modo devDependency y no como dependencia de funcionamiento.
+
+
+
+**13-04-2023**
+
+# Semana 3, Clase 4: Frameworks de UI #
+
+## ¿Qué es una biblioteca? / Library? ##
+
+Son un conjunto de funciones, clases, módulos o componentes predefinidos que pueden ser reutilizados en múltiples proyectos.
+
+Algunas Bibliotecas/librerias
+
+- jQuery
+- Lodash
+- React.js
+- y otras weas
+
+### Gestión de Repositorios de paquetes ###
+
+- Linux: Advance Package Tool = APT
+- macOS: Homebrew
+- Windows: Chocolatey, winget
+
+`Como iniciamos el asunto de los paquetes??`
+
+#### package.json ####
+
+    >npm init -y
+
+Este comando ejecuta la petición de iniciar un proyecto, armando un archivo package.json y con las opciones de configuración por omisión. Si quito la "-y" me va preguntando cada línea de la config por separado. (Ver package.json)
+
+
+### Usando Frameworks en frameworks-ui ###
+
+Instalando bootstrap para VITE. Seguimos los pasos.
+
+Consultar después la diferencia entre:
+
+    >npm install vite --save-dev
+    y
+    >npm add vite -D
+
+Como hacer carpetas "fast" con linux:
+
+    mkdir {src,src/js,src/scss}
+    touch src/index.html src/js/main.js src/scss/styles.scss vite.config.js
