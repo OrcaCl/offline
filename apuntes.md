@@ -986,6 +986,7 @@ Este comando ejecuta la petición de iniciar un proyecto, armando un archivo pac
 
 ### Usando Frameworks en frameworks-ui ###
 
+#### Bootstrap v5 ####
 Instalando bootstrap para VITE. Seguimos los pasos.
 
 Consultar después la diferencia entre:
@@ -998,3 +999,37 @@ Como hacer carpetas "fast" con linux:
 
     mkdir {src,src/js,src/scss}
     touch src/index.html src/js/main.js src/scss/styles.scss vite.config.js
+
+
+Seguir los ejemplos y ya.
+
+#### Tailwind CSS ####
+
+iniciamos la carpeta con:
+
+    npm init
+
+Para tener un archivo package.json
+
+
+Instalamos vite con:
+
+    npm install -D vite
+
+Esto para tener la posibilidad de tener un servidor de desarrollo funcionando.
+
+Seguimos la instalación original como aparece en la web de Tailwind CSS
+
+En la parte de los scripts de package.json, vamos a agregar unos scripts que inventó Guillermo:
+
+    "dev:css": "tailwindcss -i ./src/input.css -o ./scr/output.css --watch",
+    "dev:src": "vite dev src",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:src\" ",
+
+Y antes de seguir, hay que instalar una librería que Guillermo no menciona, pero es la que soluciona el error del script provocado por "concurrently". 
+
+Acá la salvada del queridísimo [StackOverflow](https://stackoverflow.com/questions/30950032/how-can-i-run-multiple-npm-scripts-in-parallel#30950298)
+
+    >npm i concurrently --save-dev
+
+
