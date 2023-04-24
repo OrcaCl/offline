@@ -1022,14 +1022,38 @@ Seguimos la instalación original como aparece en la web de Tailwind CSS
 
 En la parte de los scripts de package.json, vamos a agregar unos scripts que inventó Guillermo:
 
-    "dev:css": "tailwindcss -i ./src/input.css -o ./scr/output.css --watch",
+    "dev:css": "tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "dev:src": "vite dev src",
     "dev": "concurrently \"npm run dev:css\" \"npm run dev:src\" ",
+
+
+#### Concurrently ####
 
 Y antes de seguir, hay que instalar una librería que Guillermo no menciona, pero es la que soluciona el error del script provocado por "concurrently". 
 
 Acá la salvada del queridísimo [StackOverflow](https://stackoverflow.com/questions/30950032/how-can-i-run-multiple-npm-scripts-in-parallel#30950298)
 
     >npm i concurrently --save-dev
+
+#### Instalación de Tailwind ####
+
+    > npm install -D tailwindcss
+    > npx tailwindcss init
+
+Agregar la configuración de directorios a `tailwind.config.js`
+
+    /** @type {import('tailwindcss').Config} */
+    module.exports = {
+      content: ["./src/**/*.{html,js}"],
+      theme: {
+        extend: {}, 
+      },
+      plugins: [],  
+    }
+
+Empezar a dibujar el archivo ahora con 
+
+    >npm dev
+
 
 
