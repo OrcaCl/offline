@@ -104,5 +104,14 @@ Estos son mis 10 comandos más utilizados:
 | npx | ejecutar NPX |
 | alias | listar los alias |
 
-## Semana 2
+## ¿Cómo copiar un archivo a una carpeta inexistente, y crearla al vuelo? ##
+
+    > mkdir -p ~/Code/lodash && cp index.js ~/Code/lodash/
+
+- mkdir crea carpeta
+- -p crea la recursividad y los permisos de carpeta
+- ruta nueva carpeta
+- && es una especie de "pipe" para ejecutar 2 comandos al mismo tiempo.
+- cp = copia archivo
+- ruta nueva carpeta.
 

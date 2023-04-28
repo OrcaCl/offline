@@ -1055,5 +1055,47 @@ Empezar a dibujar el archivo ahora con
 
     >npm dev
 
+Aborté Tailwind porque quiero enfocarme más en javascript.
+Quizá lo pueda retomar después. Los ejercicios de la semana 3, clase 4 quedaron guardados en Code/frameworks-ui/tailwind-tarea
+
+## Semana 4 ##
+
+### Clase 1: Lodash y otras cosas ###
+
+Lodash es una librería que posee funciones utilitarias en Javascript moderno que entrega modularidad, rendimiento y extras.
+
+*Recordando*
+
+#### Funciones Utilitarias ####
+
+*Transformación*
+    map([a,b,c], cook) 
+    => [d,e,f]
+
+La función map siempre retorna la misma cantidad de elementos que ingresamos para la consulta.
+
+*Filtrar*
+
+    filter([a,b,c], isVegetarian)
+    => [a,c]
+
+La función filtrar retorna los elementos que forman parte o corresponden a la función que se llama para compararlos.
+
+*Reduce*
+
+    reduce([a,b], eat)
+    => p
+
+La función reductora agarra los elementos y puede botar los resultados, según lo que haga 'eat' pero generalmente devuelve menos cosas de las que entran.
+
+
+
+#### Funciones de Lodash ####
+
+Weas extra a todas las funciones, arreglos, objetos, y mil cosas que le faltan (o faltaban) a Javascript.
+
+Tomamos para el ejercicio, el index.js que existe en nuestra copia de undefined-academy/biblioteca-utilidades/
+hacemos: npm init -y y solicitamos lodash.js como una dependencia.
+
 
 
