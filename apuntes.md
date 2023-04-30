@@ -1069,6 +1069,7 @@ Lodash es una librería que posee funciones utilitarias en Javascript moderno qu
 #### Funciones Utilitarias ####
 
 *Transformación*
+
     map([a,b,c], cook) 
     => [d,e,f]
 
@@ -1088,14 +1089,82 @@ La función filtrar retorna los elementos que forman parte o corresponden a la f
 
 La función reductora agarra los elementos y puede botar los resultados, según lo que haga 'eat' pero generalmente devuelve menos cosas de las que entran.
 
-
-
-#### Funciones de Lodash ####
-
 Weas extra a todas las funciones, arreglos, objetos, y mil cosas que le faltan (o faltaban) a Javascript.
 
 Tomamos para el ejercicio, el index.js que existe en nuestra copia de undefined-academy/biblioteca-utilidades/
 hacemos: npm init -y y solicitamos lodash.js como una dependencia.
 
+En el archivo index.js estamos probando:
+| Nombre   | Descripcion |
+|----------|-------------|
+| _.group  | Agrupa elementos según una condición dada |
+| _.filter | Extrae elementos según una condición dada |
+| _.map    | Crea un nuevo grupo de elementos, en caso de encontrar una coincidencia en la condición dada, retornando SOLO los valores de la condición consultada |
+| _.orderBy| Ordena elementos de forma ascendente o descendente|
+| _.reduce | Cuenta cantidad de existencias según una condición dada |
+| _.merge | Pega sobre el elemento 1, el elemento 2|
+| _.picked | Recoge los elementos según una condición dada |
+| _.omit | Quita los elementos según una condición dada |
+| _.has | Consulta si tiene algo, condición dada |
+| _.mapValues | Consulta los datos dentro de un elemento de un objeto |
 
+En algún momento mientras escribía las herramientas de Lodash, se incrustó este código en el "import _ from "lodash""
+
+    >, { has } from
+
+Al quitarlo, se va el error de :
+
+    SyntaxError: Named export 'has' not found. The requested module 'lodash' is a CommonJS module, which may not support all module.exports as named exports.
+
+
+## Semana 4 - Clase 2 ##
+
+Fechas y revisión de la actividad anterior.
+
+### Manejo de Fechas ###
+
+Nuevas librerías para uso de Fechas con :
+- new Date();
+- Day.js
+- Temporal API
+
+*Solución del Ejercicio*
+
+    const filtradasPorTag = _.filter(entries, function(entry) {
+    return _.includes(entry.tags, "Desarrollo");
+    });
+
+    const agrupadasPorAutor = _.groupBy(filtradasPorTag, "autor");
+    const mapeandoPorTitulos = _.mapValues(agrupadasPorAutor, function (entries){
+    return _.map(entries, "titulo");
+    });
+
+    console.log(mapeandoPorTitulos);
+
+    // Output
+
+    // node index.js 
+    // {
+    //   'Juan Pérez': [ 'Introducción a HTML5', 'Cómo crear una página web desde cero' ],
+    //   'Pedro González': [
+    //     'Introducción a CSS3',
+    //     'Cómo crear un diseño atractivo para una web'
+    //   ],
+    //   'Ana Rodríguez': [ 'Cómo optimizar el rendimiento de una web' ],
+    //   'María García': [ 'Cómo usar jQuery en una web' ]
+    // }
+
+    */
+
+### new Date() ###
+
+Ver s4c2 en Code para los ejemplos de date();
+
+
+### Day.js ###
+
+import dayjs from "dayjs"
+
+const today = dayjs();
+console.log(today.format());
 
