@@ -121,7 +121,22 @@ Antes de dejar una rama y pensar en Merge o Rebase o cualquier otro comando raro
 Si quiero dejar algo almacenado temporalmente en "caché", se puede usar un comando llamado STASH, que usé en otro lado pero que probablemente otro día lo complete acá.
 
 ---
-`Agregar info de STASH ACÁ`
+## Git Stash ## 
+Si necesito salir de una rama o he olvidado hacer una rama nueva antes de hacer cambios fundamentales, pero no quiero perder todo haciendo ctrl+z o saliendo de una rama sin hacer commit, puedo guardar todos los cambios que he realizado SIN HACER COMMIT.
+
+>git stash
+
+Guarda todos los cambios que he realizado en el archivo actual, o si agrego:
+
+>git stash -u
+
+Guardo todos los cambios realizados incluyendo archivos que se encuentren "unstaged", los guarda en un hilo paralelo para poder volver a ellos posteriormente o meterlos en una rama.
+
+Recomiendo este video, en caso de que se me olvide esta wea:
+
+https://www.youtube.com/watch?v=lH3ZkwbVp5E
+
+
 
 ---
 

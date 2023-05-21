@@ -926,6 +926,7 @@ Consideremos que hay retina display, así que las fotos van al doble que lo que 
             srcset ='images/illustration-small.png 1x,
                     ='images/illustration-big.png x2'
             style='max-width: 500px' />
+    </div>
 
 
 ### Técnica 2: Usar dirección de arte con 'Picture' ###
@@ -1162,9 +1163,44 @@ Ver s4c2 en Code para los ejemplos de date();
 
 
 ### Day.js ###
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc.js";
 
-import dayjs from "dayjs"
+//Para cambiar idioma
+import es from "dayjs/locale/es.js";
+
+//Para tener fechas relativas (entre 2 tiempos)
+import relativeTime from "dayjs/plugin/relativeTime.js";
+
+dayjs.extend(utc);
+dayjs.locale(es); // use loaded locale globally}
+dayjs.extend(relativeTime);
 
 const today = dayjs();
-console.log(today.format());
+
+// console.log(today.format());
+// const birthDay = dayjs("1990-05-10");
+// console.log(birthDay.utc().format());
+
+// const formatStr = "DD/MM/YYYY HH:mm:ss";
+// const formatStrDash = "DD-MM-YYYY HH:mm:ss";
+// const formatStrtoText = "dddd DD MMM de YYYY";
+
+// console.log(today.format(formatStr));
+// console.log(today.format(formatStrDash));
+// console.log(today.format(formatStrtoText));
+
+console.log(today.add(5, "days").format("YYYY-MM-DD"));
+
+console.log(dayjs("1912-01-01").fromNow());
+
+console.log(today.subtract(3, "hours").format("MM/DD HH:mm:ss"));
+
+Porque Guillermo usó RunJS tuve que hacerlo de esta otra forma. Usando npm init -y, importar dayjs, y hacer los import usando
+la forma que puse arriba.
+
+### Temporal API ###
+
+no se puede ahcer porque no está habilitado aún.
+
 
