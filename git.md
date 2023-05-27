@@ -275,9 +275,11 @@ y después con:
 
 Abrió los archivos con modificaciones pendientes y fue escogiendo.
 
-
+## Semana 3 ##
 
 ### Cómo saber si el repo local es diferente al repo remoto ###
+
+**26-05-2023**
 
 Acabo de tener la duda sobre qué tan actualizado es mi repo local versus el repo remoto, que modifiqué en otro PC. No estoy muy seguro aún de qué cambios están acá, por lo que le pregunté a ChatGPT y me recomendó hacer uso de GIT FETCH, para consultar qué cambios hay en remoto sin bajar nada, y después `Pintar con colores las líneas de GIT LOG para ver más gráficamente las modificaciones hechas por los commits`
 
