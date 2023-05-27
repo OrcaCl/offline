@@ -258,7 +258,7 @@ Guarda en "memoria" todos los cambios staged y permite poder moverlos a otra ram
 
 Los baja nuevamente.
 
-### GIT FETCH
+### GIT FETCH // Consultar Si hay cambios en remoto
 
 >git fetch
 
@@ -275,4 +275,15 @@ y después con:
 
 Abrió los archivos con modificaciones pendientes y fue escogiendo.
 
+
+
+### Cómo saber si el repo local es diferente al repo remoto ###
+
+Acabo de tener la duda sobre qué tan actualizado es mi repo local versus el repo remoto, que modifiqué en otro PC. No estoy muy seguro aún de qué cambios están acá, por lo que le pregunté a ChatGPT y me recomendó hacer uso de GIT FETCH, para consultar qué cambios hay en remoto sin bajar nada, y después `Pintar con colores las líneas de GIT LOG para ver más gráficamente las modificaciones hechas por los commits`
+
+    git log --oneline --decorate --graph --all
+
+Y funciona tan bonito que ahí me di cuenta que estaba haciendo la consulta en la carpeta equivocada. Estaba parado en el root de semana-3 y debía entrar a la carpeta de mi nombre, de la tarea específica.
+
+Buena salvada, sino habría hecho PULL a todo el repo :S
 
