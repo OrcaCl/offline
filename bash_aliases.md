@@ -1,0 +1,10 @@
+alias code="'/mnt/c/Users/canit/AppData/Local/Programs/Microsoft VS Code/Code.exe'"
+alias cl='clear'
+alias mimark='cd Code/el-mundo-del-markdown/'
+alias mostused="history | awk '{print \$2}' | sort | uniq -c | sort -nr | head -n 10"
+alias gst='git status'
+alias cafe="cat /dev/urandom | hexdump | grep \"ca fe\""
+alias glog='git log --oneline --decorate --graph'
+alias cw="code --remote wsl+Ubuntu --goto `pwd`/"
+alias apuntes='cd Code/offline'
+alias gcam='git commit --all --message'
