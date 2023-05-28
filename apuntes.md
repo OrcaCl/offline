@@ -1204,3 +1204,34 @@ la forma que puse arriba.
 no se puede ahcer porque no está habilitado aún.
 
 
+## Semana 4 - Clase 3 Extendiendo SASS ##
+
+**Resolviendo el ejercicio anterior**
+
+Archivo es : offline/fechas-js
+
+Yo pensé que el ejercicio pedía fechas del futuro, pero era sin definir si eran del futuro o pasado. Debíamos darle los limites nosotros.
+
+El resultado de Guillermo es:
+
+
+### Sobre Javascript en Nodejs vs Javascript en Browsers"###
+
+No todas las bibliotecas de JS de cliente corren en servidor (Node js) y viceversa.
+
+- Libreria Isomórfica = Porque se ejecuta por el lado del servidor o por el lado del cliente. También llamado Librería Universal.
+
+En Node js, se "llama" a librerias o bibliotecas usando:
+    import dayjs from "dayjs"
+
+Si usaramos javascript en cliente, tendríamos que usar:
+
+    require dayjs from "dayjs.js"
+
+No recuerdo cuál es ECMAScript y cual no. Veré después.
+
+CTRL + ALT + SHIFT + Y = Controlar todos los punteros de las lineas seleccionadas.
+
+`solucion-guillermo.js`
+
+Es importante hablar con el Product Manager para saber si es necesario tirar un error en el último caso, donde pregunto sobre fechas del futuro. 
