@@ -1235,3 +1235,120 @@ CTRL + ALT + SHIFT + Y = Controlar todos los punteros de las lineas seleccionada
 `solucion-guillermo.js`
 
 Es importante hablar con el Product Manager para saber si es necesario tirar un error en el último caso, donde pregunto sobre fechas del futuro. 
+
+
+### Preprocesador SASS ###
+
+    $primary-color: #3d5afe;
+
+    @mixin button-style {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 16px;
+        color: #fff;
+        background-color: $primary-color;
+        border-radius: 4px;
+    }
+
+Para desarrollar, es necesario dejar en package.json, que para DESARROLLO guardemos SASS y VITE
+
+    npm install -D vite
+    npm install -D sass
+
+Dentro de package debo agregar un script de run, que le indique a sass que guarde los códigos en styles/main.scss y que los transpile a main.css
+
+    "dev": "vite",
+    "sass": "sass styles/main.scss styles/.css",
+
+
+**npm run**
+
+Si usas `npm run`sin especificar la tarea o script a ejecutar, te va a mostrar un listado de las tareas disponibles junto con sus descripciones.
+
+**concurrently**
+
+Si hago modificaciones a los archivos SASS sin hacer el precompilado aparte, no actualizará nunca.
+He habilitado `concurrently` nuevamente para que funcione el servidor de VITE y además que se preocupe de hacer WATCH a la carpeta 'styles' con el siguiente código del package.js
+
+  "scripts": {
+    "dev:src": "vite",
+    "dev:sass": "sass --watch styles/main.scss styles/main.css",
+    "dale": "concurrently \"npm run dev:sass\" \"npm run dev:src\""
+  },  
+
+#### Variables de SASS ####
+
+Se usa dolar para el nombre y semicolon.
+
+    $color-main: #fff;
+
+#### Mixin ####
+
+Son funciones pero pegables. Como trozos de codigo. Un pedazo de css que se puede repetir cuando se llama.
+
+#### Funciones y condicionales ####
+
+Similares a lenguajes de programación. Sirve para hacer cosas.
+
+#### Loops ####
+
+Igualito a los for, while, etc.
+
+
+Ejemplo completo:
+
+    @use "base.scss";
+
+    main {
+    padding: 0 20px;
+    }
+
+    //Variables de SASS
+
+    $color-main: #0074d9;
+
+
+    //Mixin SALVAJE HORRIBLE DE MALO; NO USAR. SOLO DEMO
+
+    @mixin center($ancho, $alto) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: $ancho;
+        height: $alto;
+    }
+
+
+    // Modificando una clase con SASS
+
+    .button {
+        background-color: $color-main;
+        color: white;
+        padding: 15px 64px;
+        border-radius: 8px;
+        border: none;
+
+        //Incorporé el mixin anterior dentro de los estilos de .button.
+        @include center(200px, 50px);
+
+        //Condicionales
+
+        @if $color-main == #0074d9 {
+            //Shortcut
+            &:hover {
+                background-color: #fff;
+            }
+        }
+
+        //Loops
+        @for $i from 1 to 5 {
+            .text-#{$i} {
+                font-size: $i * 10px;
+            }
+        }
+    }
+
+Hay más cosas para probar, pero seguimos mañana con Semana 4, Clase 4.
+La tarea está buena. Ver el SS.
+
