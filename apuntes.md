@@ -1352,3 +1352,13 @@ Ejemplo completo:
 Hay más cosas para probar, pero seguimos mañana con Semana 4, Clase 4.
 La tarea está buena. Ver el SS.
 
+### Clase 4 - Semana 4 ###
+
+**07-06-2023**
+
+Se sugiere usar minireset.css para resetar lindito el código.
+
+
+https://malaga.wordcamp.org/2020/files/2020/03/atomic-design_compressed.pdf
+
+**Atomic Design** 
