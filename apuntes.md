@@ -1362,3 +1362,53 @@ Se sugiere usar minireset.css para resetar lindito el código.
 https://malaga.wordcamp.org/2020/files/2020/03/atomic-design_compressed.pdf
 
 **Atomic Design** 
+
+- Atomos
+- Moléculas
+- Organismos
+
+**CUBE CSS**
+
+Metodología que propone Categorías:
+- Composition
+- Utility
+- Block
+- Exception
+
+
+        <article class="[ card ] [ section box ] [ bg-base color-primary ]" data-state="reversed"></article>
+
+**CSS Modules y CSS-in-JS**
+
+- Solucionan el problema de colisión de clases
+- Permiten omitir el prefijo Bloque de BEM
+- las clases no colisionan
+- Vue tiene el atributo scope que logra lo mismo.
+
+**Paradigma de Componentes**
+
+- Evita pensar en clases genéricas para elementos
+- Puede haber duplicaión de reglas, porque cada componente debe ser independiente
+- CSS Modules - `Shadow DOM` es otra wea que mencionó pero que no entró a especificar. Quizás le doy una vuelta después xD
+
+<hr>
+<br>
+
+## Design Tokens ##
+
+`https://undefined.sh/la-evolucion-de-los-design-tokens/`
+
+Qué son: Una metodología que se encarga del manejo de variables en un sistema de diseño. Pero siguiendo una estructura y jerarquía específica.
+
+Tiene 3 niveles: (parte del 0)
+
+- 0: Raw Values = El completo set de opciones o variables posibles
+- 1: Reference Tokens = Carnes, Vegetales, Huevos, Arroz
+- 2: System Tokens = Bistec, Burger, Huevo Frito, Arroz Chaufán
+- 3: Component Tokens = Churrasco, Combo 2, Omelette, Comida China
+
+Ejemplo de Composición:
+
+
+[Ejemplo de Composición](https://juangarces.me/es/how-design-tokens-impact-design-systems/)
+
