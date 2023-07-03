@@ -1412,3 +1412,8 @@ Ejemplo de Composición:
 
 [Ejemplo de Composición](https://juangarces.me/es/how-design-tokens-impact-design-systems/)
 
+
+ No se que mierda hicimos para cerrar la semana 4. Tegno que esperar a que me respondan que chucha en discord
+
+ ## Practica 1 ##
+ 
