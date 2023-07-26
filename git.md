@@ -289,3 +289,21 @@ Y funciona tan bonito que ahí me di cuenta que estaba haciendo la consulta en l
 
 Buena salvada, sino habría hecho PULL a todo el repo :S
 
+## Nuevos comandos de Julio 2023 ##
+
+### 25-07-2023 ###
+
+*Cómo eliminar un archivo del tracking de git, eliminarlo desde el repo remoto pero mantenerlo en local*
+*Esto es después de que me olvidé de dejarlo en .gitignore*
+
+Para hacerlo con un archivo unico, hay que escribir:
+
+    git rm --cached path/to/file
+
+Para hacerlo con un directorio, hay que escribir:
+
+    git rm --cached -r path/to/directory
+
+Después de hacer el cambio, es necesario hacer un nuevo `COMMIT` para que el historial sepa del cambio, y para el siguiente *push*, se eliminará del repo remoto el archivo ignorado y se mantendrá en local.
+
+
