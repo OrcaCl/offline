@@ -306,4 +306,44 @@ Para hacerlo con un directorio, hay que escribir:
 
 Después de hacer el cambio, es necesario hacer un nuevo `COMMIT` para que el historial sepa del cambio, y para el siguiente *push*, se eliminará del repo remoto el archivo ignorado y se mantendrá en local.
 
+### 01-08-2023 ###
+
+*Cómo renombrar un repositorio y actualizar la configuración local, para que apunte al repo correcto*
+
+Desde el sitio web de GitHub, en el repositorio que debemos renombrar, debemos:
+
+- Ir a Settings
+- Renombrar el repo: No usar caracteres raros ni especiales, espacios o tildes.
+- Guardar cambios.
+
+Después desde la terminal, debemos revisar qué configuración tenemos actualmente escrita, antes de seguir, usando el comando:
+
+    git remote -v
+
+Nos aparecerán las rutas, como por ejemplo:
+
+    origin git@github.com:OrcaCL/<nombre-del-repo-anterior.git> (fetch)
+    origin git@github.com:OrcaCL/<nombre-del-repo-anterior.git> (push)
+
+Ahora debemos actualizar el link, usando la nueva dirección, que podemos obtener desde la página inicial del repositorio con el nuevo nombre, tal como lo hacemos para vincular por SSH el repo.
+
+Ahora en la terminal, escribimos lo siguiente:
+    git remote set-url origin <dirección del nuevo repo.git>
+
+Y vamos a revisar si los cambios quedaron realizados, utilizando nuevamente:
+    git remote -v
+    
+    origin git@github.com:OrcaCL/<nuevo-nombre-repo.git>(origin)
+    origin git@github.com:OrcaCL/<nuevo-nombre-repo.git>(fetch)
+
+Listo!
+
+### Git Reflog ###
+
+otro comando que conocí hoy es `git reflog`
+
+Lo que hace es lo siguiente:
+is a Git command that stands for "reference log." It provides a way to view the history of all the actions that have affected the tip of branches (HEAD) and other references in your Git repository. The reflog keeps track of when the tips of branches were updated, when commits were created or amended, when branches were merged or rebased, and other related operations.
+
+Lo busqué porque es la solución que me sugiere ChatGPT para verificar si VS Code está o no sincronizando los cambios con git.  Si lo hace, pero no se por qué lo hace lento.
 
